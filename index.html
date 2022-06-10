@@ -1,343 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&family=Poppins:ital@1&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merriweather&family=Recursive&family=Roboto:wght@300;400&family=Source+Sans+Pro:wght@700&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: #1e1b33;
-        }
-
-        .logo {
-            font-family: 'Merriweather';
-            font-size: 17pt;
-        }
-
-        .logo,
-        ul li {
-            color: #fff;
-        }
-
-        ul li:hover,
-        nav ul svg:hover {
-            color: #eb4b60e5;
-            cursor: pointer;
-            fill: #eb4b60;
-            transition: 200ms;
-        }
-
-        nav,
-        nav ul {
-            display: flex;
-        }
-
-        nav {
-            justify-content: space-around;
-            margin-top: 1em;
-        }
-
-        nav ul {
-            list-style: none;
-            width: 60%;
-            justify-content: space-evenly;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        .active {
-            border-bottom: 2px solid #eb4b60;
-        }
-
-        nav ul svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: #fff;
-        }
-
-        .body-content-home {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .body-content-home img {
-            width: 5em;
-            height: 5em;
-            border-radius: 50%;
-            position: relative;
-            left: 6.5em;
-        }
-
-        .body-content-home div:first-child {
-            margin-top: 8em;
-        }
-
-        div:first-child .social-icon {
-            margin-top: 1.5em;
-            display: flex;
-            justify-content: space-evenly;
-        }
-
-        .profile-name {
-            color: #fff;
-            font-family: 'poppins';
-            font-weight: 600;
-            margin-top: .4em;
-        }
-
-        .body-content-home div:first-child p:nth-child(3) {
-            color: #fff;
-            font-family: 'poppins';
-            text-align: center;
-            margin-top: .5em;
-        }
-
-        .social-icon svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill: #fff;
-        }
-
-        .social-icon svg:hover {
-            fill: #d8dcdbb1;
-        }
-
-        .hire-btn {
-            background-color: #eb4b60;
-            font-family: 'poppins';
-            font-size: 12pt;
-            color: white;
-            padding: .6em 2.5em;
-            border-radius: 2em;
-            margin-top: 1em;
-            margin-left: 4.7em;
-            border: none;
-        }
-
-        .hire-btn:hover {
-            background: #eb4b68ce;
-            transition: 250ms;
-            cursor: pointer;
-        }
-
-        .mouse-icon {
-            fill: #fff;
-            height: 1.5em;
-            width: 1.5em;
-            margin-left: 8.8em;
-        }
-
-        .scroll-text {
-            text-align: center;
-            margin-top: 5em;
-            margin-bottom: .4em;
-            font-family: 'arial';
-            color: #fff;
-            font-size: 9pt;
-
-        }
-
-        .about-me-txt {
-            color: #fff;
-            font-family: sans-serif;
-            font-weight: 700;
-
-        }
-
-        .index-about-section {
-            margin: 4em;
-        }
-
-        .index-about-1 {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 2em;
-        }
-
-        .index-about-1 img {
-            width: 9em;
-            height: 9em;
-            border-radius: 50%;
-        }
-
-        .index-about-1-1 {
-            background-color: #31264fc5;
-            display: flex;
-            justify-content: space-between;
-            padding: 1.8em;
-            width: 70%;
-            color: #fff;
-            height: max-content;
-            border-radius: 1em;
-            font-family: 'poppins';
-            font-size: 12pt;
-        }
-
-        .index-about-1-1 .index-about {
-            width: 60%;
-        }
-
-        .index-about-1-1 .index-about-bar {
-            width: 35%;
-        }
-
-        .index-about-1-1 div:nth-child(2) h3 {
-            font-size: 12pt;
-            font-weight: 500;
-        }
-
-        .index-bar {
-            display: flex;
-            justify-content: space-between;
-            /* width: 100%; */
-        }
-
-        .no-margin {
-            margin-left: 0;
-        }
-
-        .index-bar-1,
-        .index-bar-2,
-        .index-bar-3 {
-            border: 1px solid gray;
-            height: .5em;
-            width: 100%;
-            border-radius: 2em;
-            margin-top: .4em;
-            margin-bottom: .4em;
-        }
-
-        .index-bar-1-show {
-            height: 100%;
-            width: 95%;
-            background: gold;
-            border-radius: 2em;
-        }
-
-        .index-bar-2-show {
-            height: 100%;
-            width: 75%;
-            background: rgb(244, 48, 48);
-            border-radius: 2em;
-        }
-
-        .index-bar-3-show {
-            height: 100%;
-            width: 85%;
-            background: rgb(176, 8, 198);
-            border-radius: 2em;
-        }
-
-        .index-status-container {
-            display: flex;
-            justify-content: space-around;
-            margin: 2em;
-        }
-
-        .index-status-1 {
-            display: block;
-            color: #fff;
-        }
-
-        .index-status-1 .fas {
-            height: 2em;
-            width: 2em;
-            fill: #fff;
-        }
-
-        .about-drop-content {
-            color: #fff;
-            background: #22a7b6a2;
-            width: max-content;
-            font-family: 'poppins';
-            font-size: 12pt;
-            border-radius: .5em;
-            line-height: 2;
-            position: absolute;
-            top: 3.5em;
-            left: 49.8em;
-            visibility: hidden;
-        }
-
-        .about-drop-content ul li {
-            list-style: none;
-            padding: .1em .7em;
-        }
-
-        .about-drop-content ul li:hover {
-            background-color: #e9e0e0e7;
-            color: #1e1b33;
-        }
-
-        .about-drop-content ul li .fa {
-            height: 1em;
-            width: 1em;
-            fill: #fff
-        }
-
-        .web-dev:hover{
-            border-top-left-radius: .5em;
-            border-top-right-radius: .5emf;
-        }
-
-        .web-master:hover{
-            border-bottom-left-radius: .5em;
-            border-bottom-right-radius: .5emf;
-        }
-        .nav-item li:nth-child(3) svg{
-            width: 1em;
-            height: 1em;
-            fill: #fff;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Recursive&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <nav>
-        <h3 class="logo">HemanTa</h3>
-        <ul class="nav-item">
+        <h3 class="logo">HemanTa T. MaGar</h3>
+        <ul class="nav-items">
             <li class="active">Home</li>
             <li>About</li>
-            <li>Experience <!--&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg> --></li>
+            <div class="experience">
+                <li onclick="experience()">Experience &nbsp;<i class="fa fa-caret-down"></i></li>
+                <div class="about-drop-content">
+                    <ul>
+                        <li class="web-dev"> <i class="fa fa-user"></i>Web Developer</li>
+                        <li> <i class="fa fa-users"></i> UI/UX Designer</li>
+                        <li> <i class="fa fa-globe"></i> Front-End Web Developer</li>
+                        <li class="web-master"> <i class="fa fa-file"></i> Web Master</li>
+                    </ul>
+                </div>
+            </div>
             <li>Pricing</li>
             <li>Portfolio</li>
             <li>Contact</li>
-            <li>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                     <path
                         d="M256 32V51.2C329 66.03 384 130.6 384 208V226.8C384 273.9 401.3 319.2 432.5 354.4L439.9 362.7C448.3 372.2 450.4 385.6 445.2 397.1C440 408.6 428.6 416 416 416H32C19.4 416 7.971 408.6 2.809 397.1C-2.353 385.6-.2883 372.2 8.084 362.7L15.5 354.4C46.74 319.2 64 273.9 64 226.8V208C64 130.6 118.1 66.03 192 51.2V32C192 14.33 206.3 0 224 0C241.7 0 256 14.33 256 32H256zM224 512C207 512 190.7 505.3 178.7 493.3C166.7 481.3 160 464.1 160 448H288C288 464.1 281.3 481.3 269.3 493.3C257.3 505.3 240.1 512 224 512z" />
-                </svg>
-            </li>
+                </svg></li>
         </ul>
     </nav>
-    <!-- <div class="about-drop-content">
-        <ul>
-            <li class="web-dev">Web Developer</li>
-            <li>Web Developer</li>
-            <li>Front-End Web Developer</li>
-            <li class="web-master">Web Master</li>
-        </ul>
-    </div> -->
     <div class="body-content-home">
         <div>
             <img src="/image/profile-pic.jpg" alt="profile picture">
             <h1 class="profile-name">HemanTa T. MaGar</h1>
-            <p>I'm a Front-End developer</p>
+            <p>I'm a Front End Developer</p>
             <div class="content-center">
                 <div class="social-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -366,11 +75,9 @@
                             d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z" />
                     </svg>
                 </div>
-                <button class="hire-btn">
-                    Hire Me
-                </button>
+                <button class="hire-btn">Hire Me</button>
             </div>
-            <p class="scroll-text">Scroll down</p>
+            <p class="scroll-txt">Scroll Down</p>
             <svg class="mouse-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                 <path
@@ -383,10 +90,10 @@
         <div class="index-about-1">
             <img src="/image/profile-pic.jpg" alt="profile picture">
             <div class="index-about-1-1">
-                <div class="index-about">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sequi inventore, eaque quibusdam
-                        voluptas commodi magni ullam, molestiae iste asperiores voluptates molestias sit vel architecto!
-                    </p>
+                <div class="index-about-2">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore officia nemo, dolorem ex
+                        nesciunt, est exercitationem odio quisquam veniam perferendis qui dolores eum nihil sint!
+                        Molestiae ex magni iste obcaecati?</p>
                     <button class="hire-btn no-margin">Download CV</button>
                 </div>
                 <div class="index-about-bar">
@@ -401,34 +108,74 @@
                         <h3>Photography</h3>
                         <h3>75%</h3>
                     </div>
-                    <div class="index-bar-2">
+                    <div class="index-bar-1">
                         <div class="index-bar-2-show"></div>
                     </div>
                     <div class="index-bar">
-                        <h3>UI / UX design</h3>
+                        <h3>UI/UX Design</h3>
                         <h3>85%</h3>
                     </div>
-                    <div class="index-bar-3">
+                    <div class="index-bar-1">
                         <div class="index-bar-3-show"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="index-status-container">
-            <div class="index-status-1">
-                <i class="fas fa-thumbs-up"></i>
+    </div>
+    <div class="index-status-container">
+        <div class="index-status-1">
+            <i class="fas fa-thumbs-up"></i>
+            <i class="fas fa-mug-hot"></i>
+            <i class="fas fa-users"></i>
+            <i class="fas fa-trophy"></i>
+        </div>
+        <div class="index-status-1">
+            <h3>198</h3>
+            <h3>6798</h3>
+            <h3>428 &nbsp;</h3>
+            <h3>28 &nbsp;</h3>
+        </div>
+        <div class="index-status-1">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Project done</p>
+            <p>&nbsp;&nbsp;Cup of coffee</p>
+            <p>&nbsp;&nbsp;Satisfied clients</p>
+            <p>Nomination winner&nbsp;&nbsp;&nbsp;</p>
+        </div>
+    </div>
+    <div class="index-about-section">
+        <h1 class="about-me-txt">Services</h1>
+        <div class="index-services-section">
+            <div class="services-box sb1">
+                <div>
+                    <img src="/image/paint.png" alt="paint image">
+                    <h3>UX/UI Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit deleniti aspernatur ea sed
+                        molestias autem quos consequatur tempora aliquid, eaque perferendis praesentium aperiam nisi
+                        necessitatibus cum incidunt nostrum pariatur totam.</p>
+                </div>
             </div>
-            <div class="index-status-1">
-               <i class="fas fa-mug-hot"></i>
+            <div class="services-box sb2">
+                <div>
+                    <img src="/image/webdev.png" alt="web development image">
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit deleniti aspernatur ea sed
+                        molestias autem quos consequatur tempora aliquid, eaque perferendis praesentium aperiam nisi
+                        necessitatibus cum incidunt nostrum pariatur totam.</p>
+                </div>
             </div>
-            <div class="index-status-1">
-                <i class="fas fa-users"></i>
-            </div>
-            <div class="index-status-1">
-                <i class="fas fa-trophy"></i>
+            <div class="services-box sb3">
+                <div>
+                    <img src="/image/camera.png" alt="camera image">
+                    <h3>Photography</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit deleniti aspernatur ea sed
+                        molestias autem quos consequatur tempora aliquid, eaque perferendis praesentium aperiam nisi
+                        necessitatibus cum incidunt nostrum pariatur totam.</p>
+                </div>
             </div>
         </div>
     </div>
+    <p class="foot-p">Looking for a custom job? <span><a href="#">Click here</a></span> to contact me.👋 </p>
+    <script src="/script.js"></script>
 </body>
 
 </html>
